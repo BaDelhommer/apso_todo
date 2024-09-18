@@ -1,12 +1,11 @@
 package main
 
-type config struct {
-	items map[int]string
-}
+import "apso_todo/internal/database"
 
 func main() {
-	cfg := config{
-		items: map[int]string{1: ""},
+	db, err := database.NewDB("database.json")
+	if err != nil {
+		panic(err)
 	}
-	startRepl(&cfg)
+	startRepl(db)
 }

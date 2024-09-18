@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"apso_todo/internal/database"
+	"fmt"
+)
 
-func commandHelp(cfg *config, args ...string) error {
+func commandHelp(db *database.DB, args ...string) error {
 	fmt.Println()
 	fmt.Println("Welcome to the APSO To Do app!")
 	fmt.Println("Usage:")

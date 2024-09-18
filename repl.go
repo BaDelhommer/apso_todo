@@ -1,13 +1,14 @@
 package main
 
 import (
+	"apso_todo/internal/database"
 	"bufio"
 	"fmt"
 	"os"
 	"strings"
 )
 
-func startRepl(cfg *config) {
+func startRepl(db *database.DB) {
 	reader := bufio.NewScanner(os.Stdin)
 
 	for {
@@ -28,7 +29,7 @@ func startRepl(cfg *config) {
 
 		command, exists := getCommands()[commandName]
 		if exists {
-			err := command.callback(cfg, args...)
+			err := command.callback(db, args...)
 			if err != nil {
 				fmt.Println(err)
 			}
@@ -37,7 +38,6 @@ func startRepl(cfg *config) {
 			fmt.Println("Unknown Command")
 			continue
 		}
-
 	}
 }
 
@@ -50,7 +50,7 @@ func cleanInput(text string) []string {
 type cliCommand struct {
 	name        string
 	description string
-	callback    func(*config, ...string) error
+	callback    func(*database.DB, ...string) error
 }
 
 func getCommands() map[string]cliCommand {

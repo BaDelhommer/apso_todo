@@ -1,8 +1,11 @@
 package main
 
-import "os"
+import (
+	"apso_todo/internal/database"
+	"os"
+)
 
-func commandExit(cfg *config, args ...string) error {
+func commandExit(db *database.DB, args ...string) error {
 	os.Exit(0)
 	return nil
 }
