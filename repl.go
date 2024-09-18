@@ -65,5 +65,10 @@ func getCommands() map[string]cliCommand {
 			description: "exits the program",
 			callback:    commandExit,
 		},
+		"create": {
+			name:        "create",
+			description: "prompts user for name, and description then creates a todo item",
+			callback:    commandCreate,
+		},
 	}
 }
