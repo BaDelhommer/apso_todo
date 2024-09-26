@@ -70,5 +70,10 @@ func getCommands() map[string]cliCommand {
 			description: "prompts user for name, and description then creates a todo item",
 			callback:    commandCreate,
 		},
+		"complete": {
+			name:        "complete",
+			description: "enter the id of todo item to be completed as an argument to the command, ie: complete [id]",
+			callback:    commandComplete,
+		},
 	}
 }
