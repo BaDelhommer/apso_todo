@@ -11,9 +11,9 @@ Download the code and use ```go build``` to build the executable
 Running the program starts a REPL that takes commands.
 
 Available commands:
-* help: displays info about a command
-* exit: exits the program
-* create: prompts the user for a name and description, then creates a new item with that info
-* complete: takes an id number of a todo item, then marks that item as complete
-* list: lists open todo items
-* report: prints a report to stdout showing all completed and open todo items
+* __help__: displays info about a commands, can take a command name as argument to display help for that command only
+* __exit__: exits the program
+* __create__: prompts the user for a name and description, then creates a new item with that info
+* __complete__: takes an id number of a todo item, then marks that item as complete
+* __list__: lists open todo items
+* __report__: prints a report to stdout showing all completed and open todo items
