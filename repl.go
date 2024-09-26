@@ -80,5 +80,10 @@ func getCommands() map[string]cliCommand {
 			description: "lists open todo items",
 			callback:    commandList,
 		},
+		"report": {
+			name:        "report",
+			description: "prints a report of completed and incomplete todo items",
+			callback:    commandReport,
+		},
 	}
 }
