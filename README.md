@@ -9,9 +9,9 @@ Command line REPL to do app for no reason. I think there is a legal requirement 
 Download the code and use ```go build``` to build the executable
 
 Available commands:
-*help: displays info about a command
-*exit: exits the program
-*create: prompts the user for a name and description, then creates a new item with that info
-*complete: takes an id number of a todo item, then marks that item as complete
-*list: lists open todo items
-*report: prints a report to stdout showing all completed and open todo items
+* help: displays info about a command
+* exit: exits the program
+* create: prompts the user for a name and description, then creates a new item with that info
+* complete: takes an id number of a todo item, then marks that item as complete
+* list: lists open todo items
+* report: prints a report to stdout showing all completed and open todo items
