@@ -61,3 +61,20 @@ func (db *DB) CompleteItem(id int) (ToDoItem, error) {
 
 	return item, nil
 }
+
+func (db *DB) ListOpenItems() ([]ToDoItem, error) {
+	var itemSlice []ToDoItem
+
+	dbStructure, err := db.loadDB()
+	if err != nil {
+		return []ToDoItem{}, err
+	}
+
+	for _, item := range dbStructure.Items {
+		if item.DateComplete.IsZero() {
+			itemSlice = append(itemSlice, item)
+		}
+	}
+
+	return itemSlice, nil
+}
