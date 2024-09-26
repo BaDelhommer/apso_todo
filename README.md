@@ -8,6 +8,8 @@ Command line REPL to do app for no reason. I think there is a legal requirement 
 
 Download the code and use ```go build``` to build the executable
 
+Running the program starts a REPL that takes commands.
+
 Available commands:
 * help: displays info about a command
 * exit: exits the program
